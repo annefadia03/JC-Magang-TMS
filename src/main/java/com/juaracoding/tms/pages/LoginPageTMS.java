@@ -26,11 +26,13 @@ public class LoginPageTMS {
     WebElement btnProfile;
     @FindBy(xpath = "//a[normalize-space()='Log Out']")
     WebElement btnLogout;
+
     @FindBy(xpath = "//*[@id=\"page-container\"]/div/div[1]")
     WebElement txtInvalidLogin;
 
     @FindBy(xpath = "//*[@id=\"page-wrapper\"]/div/div[1]/div/h1")
     WebElement txtDashboard;
+
 
     public void enterUsername(String username){
         this.username.sendKeys(username);
@@ -55,5 +57,18 @@ public class LoginPageTMS {
         btnProfile.click();
         btnLogout.click();
     }
+    public String PasswordNul(){
+        return  this.username.getAttribute("required");
+    }
+    public String UsernameNull(){
+        return this.password.getAttribute("required");
+    }
+    public String NullPasswordAdmin(){
+       return this.username.getAttribute("required");
+    }
+    public String NullUsernameAdmin(){
+        return this.username.getAttribute("required");
+    }
+
 
 }

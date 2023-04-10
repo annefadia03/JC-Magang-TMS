@@ -1,7 +1,9 @@
 package com.juaracoding.tms;
 
 import com.juaracoding.tms.drivers.strategies.DriverSingleton;
+import com.juaracoding.tms.pages.LoginPageTMS;
 import com.juaracoding.tms.utils.Constants;
+import com.juaracoding.tms.utils.TestScenarios;
 import com.juaracoding.tms.utils.Utils;
 import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
@@ -15,6 +17,7 @@ public class Hooks {
     public static WebDriver driver;
     public static ExtentTest extentTest;
     public static ExtentReports reports = new ExtentReports("target/extent-report.html");
+
 
     @Before
     public static void setUp(){
